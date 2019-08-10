@@ -14,3 +14,6 @@ Available only from api level 21 onward. When set to true, `android:statusBarCol
 
 Available only from api level 21 onward. Set system bar color to the given color. Has no effect if `android:windowTranslucentStatus` is true.
 
+***
+
+`android:fitsSystemWindows="true"` is useless by itself. `android:fitsSystemWindows="true"` works for some layouts like `CoordinatorLayout` and `DrawerLayout` because they have some if-else logic to check for `android:fitsSystemWindows` and apply some additional paddings.
