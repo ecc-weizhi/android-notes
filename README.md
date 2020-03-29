@@ -1,2 +1,2 @@
 # android-notes
-Good android practices
+Good android practices and notes
