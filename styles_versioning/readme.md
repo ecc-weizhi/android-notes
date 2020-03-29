@@ -79,3 +79,29 @@ This is mainly about theming for the entire app, however similar technique can a
 
 </resources>
 ```
+
+### Styles qualifier and referencing
+Supposed you have the following setup:
+
+in `values-v21/styles.xml`
+
+```xml
+<style name="foo">
+    <item name="colorPrimary">@color/red</item>
+</style>
+```
+
+in `values/styles.xml`
+
+```xml
+<style name="foo">
+    <item name="colorPrimary">@color/blue</item>
+</style>
+
+<style name="bar" parent="foo">
+</style>
+```
+
+and you use `@style/bar` like `<LinearLayout android:theme="@style/bar">`.
+- `colorPrimary` is blue on device running api level <21
+- `colorPrimary` is red on device running api level >=21

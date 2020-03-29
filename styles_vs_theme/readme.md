@@ -3,7 +3,7 @@
 Both are declared in the same way usually in `styles.xml`.
 
 This is a theme:
-```
+```xml
 <style name="Base.V0.AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
     <!-- Non api level specific attributes -->
     <item name="colorPrimary">@color/colorPrimary</item>
@@ -24,7 +24,7 @@ This is a theme:
 ```
 
 This is a style:
-```
+```xml
 <style name="BottomButtonStyle">
     <item name="android:background">?attr/colorPrimary</item>
     <item name="android:foreground">?selectableItemBackground</item>
@@ -40,7 +40,7 @@ This is a style:
 - A Theme and Style declaration is indistinguishable from the app/IDE/compiler perspective. the difference lies in how they are used.
 
 In this example, MyTheme can contain both theme attributes such as `colorPrimary` and view's attribute such as `android:orientation`. Both theme attributes and view's attributes will be applied to LinearLayout itself and childView of LinearLayout.
-```
+```xml
 <LinearLayout android:theme="@style/MyTheme">
     
     <!-- Anything here will also have a MyTheme applied -->
@@ -49,7 +49,7 @@ In this example, MyTheme can contain both theme attributes such as `colorPrimary
 ```
 
 In this example, MyStyle can only contain view's attribute (you can have theme attributes in MyStyle but they will not be applied). MyStyle will be applied only to LinearLayout itself.
-```
+```xml
 <LinearLayout style="@style/MyStyle">
 
 	<!-- Anything here will NOT have MyStyle applied -->
